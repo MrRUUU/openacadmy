@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>		 	 
+		<record model="ir.ui.view" id="professor_form_view">
+            <field name="name">openacademy.professor.form</field>
+            <field name="model">openacademy.professor</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Formulari de professor">
+                    <sheet>
+                        <group>
+                            <field name="professor_nom"/>
+                            <field name="professor_cognoms"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+		 
+        <record model="ir.ui.view" id="professor_tree_view">
+            <field name="name">openacademy.professor.tree</field>
+            <field name="model">openacademy.professor</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Arbre de professor">
+                    <field name="professor_nom"/>
+                    <field name="professor_cognoms"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="professor_search_view">
+            <field name="name">openacademy.professor.search</field>
+            <field name="model">openacademy.professor</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="professor_nom"/>
+                      <field name="professor_cognoms"/>
+                      <field name="phone"/>
+                      <field name="email"/>
+                </search>
+            </field>
+        </record>		
+
+        <record model="ir.ui.view" id="materia_form_view">
+            <field name="name">openacademy.materia.form</field>
+            <field name="model">openacademy.materia</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Formulari de materia">
+                    <sheet>
+                        <group>
+                            <field name="materia_nom"/>
+                            <field name="descripcio"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="materia_tree_view">
+            <field name="name">openacademy.materia.tree</field>
+            <field name="model">openacademy.materia</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Arbre de materia">
+                    <field name="materia_nom"/>
+                    <field name="descripcio"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="materia_search_view">
+            <field name="name">openacademy.materia.search</field>
+            <field name="model">openacademy.materia</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="materia_nom"/>
+                      <field name="descripcio"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="curs_form_view">
+            <field name="name">openacademy.curs.form</field>
+            <field name="model">openacademy.curs</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Formulari de Curs">
+                    <sheet>
+                        <group>
+                            <field name="curs_nom"/>
+                            <field name="nivell"/>
+                            <field name="professor"  widget='selection'/>
+                            <field name="materia"  widget='selection'/>
+							<field name="alumne"  widget='selection'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="curs_tree_view">
+            <field name="name">openacademy.curs.tree</field>
+            <field name="model">openacademy.curs</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Arbre de curs">
+                    <field name="curs_nom"/>
+                    <field name="nivell"/>
+                    <field name="professor"/>
+                    <field name="materia"/>
+					<field name="alumne"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="alumne_form_view">
+            <field name="name">openacademy.alumne.form</field>
+            <field name="model">openacademy.alumne</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Formulari alumne">
+                    <sheet>
+                        <group>
+                            <field name="alumne_nom"/>
+                            <field name="alumne_cognoms"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="alumne_tree_view">
+            <field name="name">openacademy.alumne.tree</field>
+            <field name="model">openacademy.alumne</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Arbre de materia">
+                    <field name="alumne_nom"/>
+                    <field name="alumne_cognoms"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="alumne_search_view">
+            <field name="name">openacademy.alumne.search</field>
+            <field name="model">openacademy.alumne</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="alumne_nom"/>
+                      <field name="alumne_cognoms"/>
+                </search>
+            </field>
+        </record>
+		 
+        <record model="ir.actions.act_window" id="professor_list_action">
+            <field name="name">Professors</field>
+            <field name="res_model">openacademy.professor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crea un nou professor</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="materia_list_action">
+            <field name="name">Matèries</field>
+            <field name="res_model">openacademy.materia</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crea una nova materia</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="curs_list_action">
+            <field name="name">Cursos</field>
+            <field name="res_model">openacademy.curs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crea un nou curs</p>
+            </field>
+        </record>
+
+		<record model="ir.actions.act_window" id="alumne_list_action">
+            <field name="name">Alumne</field>
+            <field name="res_model">openacademy.alumne</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crea una nova alumne</p>
+            </field>
+        </record>
+		
+        <menuitem id="main_openacademy_menu" name="Acadèmia Oberta"/>
+
+        <menuitem id="openacademy_menu" name="Acadèmia Oberta" parent="main_openacademy_menu"/>
+
+        <menuitem id="professor_menu" name="Professors" parent="openacademy_menu" action="professor_list_action"/>
+        <menuitem id="materia_menu" name="Matèries" parent="openacademy_menu" action="materia_list_action"/>
+        <menuitem id="curs_menu" name="Cursos" parent="openacademy_menu" action="curs_list_action"/>
+	    <menuitem id="curs_menu" name="Alumne" parent="openacademy_menu" action="curs_list_action"/>
+		
+     
+     
+    </data>
+</openerp>
