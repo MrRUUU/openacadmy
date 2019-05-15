@@ -28,7 +28,7 @@ class Curs(models.Model):
     nivell = fields.Char(string="nivell", size=20)
     professor = fields.Many2one('openacademy.professor', 'professor_id')
     materia = fields.Many2one('openacademy.materia', 'materia_id')
-	alumne = fields.Many2one('openacademy.alumne','alumne_id')
+    alumne = fields.Many2one('openacademy.alumne','alumne_id')
 	
 class Alumne(models.Model):
     _name = 'openacademy.alumne'
