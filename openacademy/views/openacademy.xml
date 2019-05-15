@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>		 	 
-		<record model="ir.ui.view" id="professor_form_view">
+        <record model="ir.ui.view" id="professor_form_view">
             <field name="name">openacademy.professor.form</field>
             <field name="model">openacademy.professor</field>
             <field name="type">form</field>
@@ -188,7 +188,7 @@
             </field>
         </record>
 
-		<record model="ir.actions.act_window" id="alumne_list_action">
+	<record model="ir.actions.act_window" id="alumne_list_action">
             <field name="name">Alumne</field>
             <field name="res_model">openacademy.alumne</field>
             <field name="view_type">form</field>
