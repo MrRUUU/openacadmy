@@ -97,7 +97,7 @@
                             <field name="nivell"/>
                             <field name="professor"  widget='selection'/>
                             <field name="materia"  widget='selection'/>
-							<field name="alumne"  widget='selection'/>
+			    <field name="alumne"  widget='selection'/>
                         </group>
                     </sheet>
                 </form>
@@ -114,7 +114,7 @@
                     <field name="nivell"/>
                     <field name="professor"/>
                     <field name="materia"/>
-					<field name="alumne"/>
+		    <field name="alumne"/>
                 </tree>
             </field>
         </record>
@@ -205,7 +205,7 @@
         <menuitem id="professor_menu" name="Professors" parent="openacademy_menu" action="professor_list_action"/>
         <menuitem id="materia_menu" name="Matèries" parent="openacademy_menu" action="materia_list_action"/>
         <menuitem id="curs_menu" name="Cursos" parent="openacademy_menu" action="curs_list_action"/>
-	    <menuitem id="curs_menu" name="Alumne" parent="openacademy_menu" action="curs_list_action"/>
+	<menuitem id="curs_menu" name="Alumne" parent="openacademy_menu" action="alumne_list_action"/>
 		
      
      
