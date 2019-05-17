@@ -9,6 +9,7 @@ class Professor(models.Model):
     professor_nom = fields.Char('nom', size=20, required=True)
     professor_cognoms = fields.Char('cognoms', size=30, required=True)
     phone = fields.Char('telèfon', size=9, required=True)
+    baixa = fields.Boolean(default False)	
     email = fields.Char('correuElectrònic')    
     professor_id = fields.One2many('openacademy.curs', 'professor')
 
