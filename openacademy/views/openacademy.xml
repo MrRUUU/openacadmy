@@ -13,6 +13,7 @@
                             <field name="professor_cognoms"/>
                             <field name="phone"/>
                             <field name="email"/>
+		            <field name="baixa"/>
                         </group>
                     </sheet>
                 </form>
@@ -29,6 +30,7 @@
                     <field name="professor_cognoms"/>
                     <field name="phone"/>
                     <field name="email"/>
+	            <field name="baixa"/>
                 </tree>
             </field>
         </record>
@@ -42,6 +44,7 @@
                       <field name="professor_cognoms"/>
                       <field name="phone"/>
                       <field name="email"/>
+	              <field name="baixa"/>
                 </search>
             </field>
         </record>		
