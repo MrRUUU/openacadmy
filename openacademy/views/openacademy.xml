@@ -202,10 +202,10 @@
 
         <menuitem id="openacademy_menu" name="Acadèmia Oberta" parent="main_openacademy_menu"/>
 
-        <menuitem id="professor_menu" name="Professors" parent="openacademy_menu" action="professor_list_action"/>
-        <menuitem id="materia_menu" name="Matèries" parent="openacademy_menu" action="materia_list_action"/>
+        <menuitem id="professor_menu" name="Professors" parent="curs_menu" action="professor_list_action"/>
+        <menuitem id="materia_menu" name="Matèries" parent="curs_menu" action="materia_list_action"/>
         <menuitem id="curs_menu" name="Cursos" parent="openacademy_menu" action="curs_list_action"/>
-	<menuitem id="curs_menu" name="Alumne" parent="openacademy_menu" action="alumne_list_action"/>
+	<menuitem id="alumne_menu" name="Alumne" parent="curs_menu" action="alumne_list_action"/>
 		
      
      
