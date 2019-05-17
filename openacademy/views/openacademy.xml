@@ -207,6 +207,7 @@
         <menuitem id="curs_menu" name="Cursos" parent="openacademy_menu" action="curs_list_action"/>
 	<menuitem id="alumne_menu" name="Alumne" parent="curs_menu" action="alumne_list_action"/>
 		
+		
      
      
     </data>
